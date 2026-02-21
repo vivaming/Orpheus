@@ -68,6 +68,8 @@ if (trackCount.count === 0) {
     { name: '林俊杰', image_url: '/artists/jj.jpg', bio: '新加坡华语流行歌手' },
     { name: '陈奕迅', image_url: '/artists/eason.jpg', bio: '香港流行音乐歌手' },
     { name: '薛之谦', image_url: '/artists/joker.jpg', bio: '华语流行男歌手' },
+    { name: 'Documentary', image_url: '/artists/doc.jpg', bio: '纪录片和历史内容' },
+    { name: '三木説', image_url: '/artists/sanmu.jpg', bio: '二战历史播客' },
   ];
 
   const artistIds: number[] = [];
@@ -97,11 +99,12 @@ if (trackCount.count === 0) {
   const insertTrack = db.prepare('INSERT INTO tracks (title, artist_id, album_id, duration, audio_url, cover_url) VALUES (?, ?, ?, ?, ?, ?)');
 
   const tracks = [
-    { title: '最伟大的作品', artist_id: artistIds[0], album_id: albumIds[0], duration: 286, audio_url: '/audio/placeholder.mp3', cover_url: '/albums/greatest.jpg' },
-    { title: '光年之外', artist_id: artistIds[1], album_id: albumIds[1], duration: 235, audio_url: '/audio/placeholder.mp3', cover_url: '/albums/zoo.jpg' },
-    { title: '修炼爱情', artist_id: artistIds[2], album_id: albumIds[2], duration: 298, audio_url: '/audio/placeholder.mp3', cover_url: '/albums/survivor.jpg' },
-    { title: '十年', artist_id: artistIds[3], album_id: albumIds[3], duration: 203, audio_url: '/audio/placeholder.mp3', cover_url: '/albums/admit.jpg' },
-    { title: '演员', artist_id: artistIds[4], album_id: albumIds[4], duration: 301, audio_url: '/audio/placeholder.mp3', cover_url: '/albums/dust.jpg' },
+    { title: '最伟大的作品', artist_id: artistIds[0], album_id: albumIds[0], duration: 286, audio_url: '/audio/track_1.mp3', cover_url: '/albums/greatest.jpg' },
+    { title: '光年之外', artist_id: artistIds[1], album_id: albumIds[1], duration: 235, audio_url: '/audio/track_2.mp3', cover_url: '/albums/zoo.jpg' },
+    { title: '修炼爱情', artist_id: artistIds[2], album_id: albumIds[2], duration: 298, audio_url: '/audio/track_3.mp3', cover_url: '/albums/survivor.jpg' },
+    { title: '十年', artist_id: artistIds[3], album_id: albumIds[3], duration: 203, audio_url: '/audio/track_4.mp3', cover_url: '/albums/admit.jpg' },
+    { title: '演员', artist_id: artistIds[4], album_id: albumIds[4], duration: 301, audio_url: '/audio/track_5.mp3', cover_url: '/albums/dust.jpg' },
+    { title: 'relative rise and fall of the power  China, Japan, and South Korea', artist_id: artistIds[5], album_id: null, duration: 1231, audio_url: '/audio/chinajapan_korea_power.mp3', cover_url: null },
   ];
 
   const trackIds: number[] = [];
