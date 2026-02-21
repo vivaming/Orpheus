@@ -1,7 +1,13 @@
 import Database from 'better-sqlite3';
 import type { Track, Playlist, Artist, Album, PlaylistTrack } from './types';
+import path from 'path';
 
-const db = new Database('orpheus.db');
+// 在 Vercel 上使用 /tmp 目录，本地使用项目目录
+const dbPath = process.env.VERCEL
+  ? path.join('/tmp', 'orpheus.db')
+  : 'orpheus.db';
+
+const db = new Database(dbPath);
 
 // Enable foreign keys
 db.pragma('foreign_keys = ON');
